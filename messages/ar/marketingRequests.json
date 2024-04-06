@@ -1,0 +1,49 @@
+{
+  "Incentive": "حافز",
+  "Commission": "العموله",
+  "rate": "نسبة",
+  "Order Date": "تاريخ الطلب",
+  "marketing_requests": "طلبات التسويق",
+  "Acceptance period": "مدة قبول الطلب",
+  "minutes": "دقيقة",
+  "hours": "ساعة",
+  "Accept": "قبول الطلب",
+  "Reject": "رفض",
+  "Motivation": "الحافز",
+  "early promotion": "للترويج المبكر",
+  "Store": "المتجر",
+  "accept-1": "شكراً لقبول الطلب",
+  "accept-2": "سيتم شحن المنتج في أقرب وقت لموقعك لتبدأ رحلتك في التسويق والإبداع!",
+  "Product shipped": "تم شحن المنتج",
+  "Details": "تفاصيل",
+  "Shipment follow-up": "متابعة الشحنة",
+  "tracking number": "رقم التتبع",
+  "Charging status": "حالة الشحن",
+  "Delivery underway": "جاري التوصيل",
+  "Product is on the way": "المنتج في الطريق إليك",
+  "Product delivered": "تم تسليم المنتج",
+  "New video clip": "مقطع فيديو جديد",
+  "Press here": "اضغط هُنا",
+  "To add the video": "لإضافة مقطع الفديو",
+  "Or by drag and drop": "أو عن طريق السحب والإفلات",
+  "Publish": "نشر",
+  "Add categories": "إضافة فئات",
+  "Helps match Reels clip to the right viewers": "تساعد على مطابقة مقطع ريلز مع المشاهدين المناسبين",
+  "The product you are promoting": "المنتج الذي تروج له",
+  "Write what's on your mind and don't forget to add the hashtag!": "اكتب مايجول بخاطرك ولا تنسى اضافه الهاشتاق!",
+  "Description": "الوصف",
+  "The clip will be reviewed and you will be notified upon approval": "سيتم مراجعة المقطع واشعارك عند الموافقه",
+  "Select up to 3 categories to help match your Rails video to the right viewers": "حدد ٣ فئات بحد أقصى للمساعدة على مطابقة مطع ريلز الخاص بك مع المشاهدين المناسبين",
+  "💃 Fashion and beauty": "💃  موضة وجمال",
+  "fancy dress": "ملابس تنكرية",
+  "👟 shoes": "👟  أحذيه",
+  "Home shoes": "أحذيه منزل",
+  "Occasion shoes": "أحذيه مناسبات",
+  "Seize the opportunity and start promoting early!": "اغتنم الفرصة وابدأ الترويج مبكرًا!",
+  "Promote early and get a special commission rate when you start": "روج مُبكراً وأحصل على نسبة عموله مميزة عند البداية",
+  "Promotion duration": "مدة الترويج",
+  "Promote now": "روج الآن",
+  "First week": "الاسبوع الاول",
+  "Second week": "الاسبوع الثاني",
+  "Third week": "الاسبوع الثالث"
+}
