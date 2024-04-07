@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
-
 import Image from "next/image";
 import { Link } from "@/navigation";
 
@@ -40,13 +39,11 @@ const CustomNavLink = ({ name, icon, link, tab }: Props) => {
       href={`/profile?tab=${link}`}
       className={`p-2 flex items-center gap-4 font-bold rounded-full cursor-pointer relative ${
         tab === link ? "bg-cloud" : "text-asphalt"
-      }`}
-    >
+      }`}>
       <div
         className={`rounded-full p-3  ${
           tab === link ? "bg-primary" : "bg-cloud"
-        }`}
-      >
+        }`}>
         {icon}
       </div>
       <p>{name}</p>
@@ -55,8 +52,7 @@ const CustomNavLink = ({ name, icon, link, tab }: Props) => {
         <div
           className={`absolute bg-primary rounded-e-[9px] h-10 w-1 top-3 ${
             locale === "ar" ? "-right-4" : "-left-4"
-          }`}
-        ></div>
+          }`}></div>
       )}
     </Link>
   );
@@ -89,14 +85,12 @@ const SideBar = ({ tab }: { tab: string }) => {
 
           <Link
             href="/profile?tab=notifications"
-            className=" cursor-pointer p-3 rounded-full bg-cloud"
-          >
+            className=" cursor-pointer p-3 rounded-full bg-cloud">
             <p className="relative">
               <NotificationIcon />
               <span
                 className="absolute w-4 h-4 rounded-full flex items-center justify-center rtl:left-[-2px]
-              ltr:right-[-2px] top-[-4px] bg-[#FF527B] border border-white font-bold text-white text-[10px]"
-              >
+              ltr:right-[-2px] top-[-4px] bg-[#FF527B] border border-white font-bold text-white text-[10px]">
                 3
               </span>
             </p>
@@ -110,13 +104,11 @@ const SideBar = ({ tab }: { tab: string }) => {
           href="/profile?tab=personal_information"
           className={`p-2 flex items-center gap-4 font-bold rounded-full cursor-pointer relative ${
             tab === "personal_information" ? "bg-cloud" : "text-asphalt"
-          }`}
-        >
+          }`}>
           <div
             className={`rounded-full p-3  ${
               tab === "personal_information" ? "bg-primary" : "bg-cloud"
-            }`}
-          >
+            }`}>
             <InfoIcon
               color={tab === "personal_information" ? "white" : "#455560"}
             />
@@ -127,8 +119,7 @@ const SideBar = ({ tab }: { tab: string }) => {
             <div
               className={`absolute bg-primary rounded-e-[9px] h-10 w-1 top-3 ${
                 locale === "ar" ? "-right-4" : "-left-4"
-              }`}
-            ></div>
+              }`}></div>
           )}
         </Link>
       </div>
@@ -137,11 +128,11 @@ const SideBar = ({ tab }: { tab: string }) => {
       <div className="flex flex-col gap-4 py-4">
         <CustomNavLink
           name={t("my files and videos")}
-          link="my_files_and_videos"
+          link="my-files-and-videos"
           tab={tab}
           icon={
             <VideoIcon
-              color={tab === "my_files_and_videos" ? "white" : "#455560"}
+              color={tab === "my-files-and-videos" ? "white" : "#455560"}
             />
           }
         />

@@ -25,6 +25,7 @@ import AllStatistics from "./influencer/statistics/allStatistics";
 import MarketingRequests from "./influencer/marketingRequests/MarketingRequests";
 import AllSalesStatistics from "./influencer/sellesStatistics/AllSalesStatistics";
 import InfluencerNotifications from "./influencer/Notifications/InfluencerNotifications";
+import AllMyFilesAndVideos from "./influencer/myFilesAndVideos/allReels";
 
 const UserPage = ({ searchParams }: { searchParams: { tab: string } }) => {
   const tab = searchParams.tab;
@@ -62,17 +63,18 @@ const UserPage = ({ searchParams }: { searchParams: { tab: string } }) => {
         {tab === "marketing_requests" && <MarketingRequests />}
         {tab === "personal_information" && <PersonalInforamtion />}
 
-        {/*  <div className="px-4 md:px-8 lg:px-0 mt-6 md:mt-8 lg:mt-0"> */}
-        {tab === "selles" && <AllSales />}
-        {tab === "earns" && <MainProfits />}
-        {tab === "show-all" && <AllEarns />}
-        {tab === "statistics" && <AllStatistics />}
-        {tab === "followers-stats" && <AllStats />}
-        {tab === "influencer-reels" && <AllReels />}
-        {tab === "reels-stats" && <AllReelsStats />}
-        {tab === "selles-statistics" && <AllSalesStatistics />}
-        {tab === "influencer-notifications" && <InfluencerNotifications />}
-        {/* </div> */}
+        <div className="px-4 md:px-8 lg:px-0 mt-6 md:mt-8 lg:mt-0 w-full">
+          {tab === "selles" && <AllSales />}
+          {tab === "earns" && <MainProfits />}
+          {tab === "show-all" && <AllEarns />}
+          {tab === "statistics" && <AllStatistics />}
+          {tab === "followers-stats" && <AllStats />}
+          {tab === "influencer-reels" && <AllReels />}
+          {tab === "reels-stats" && <AllReelsStats />}
+          {tab === "selles-statistics" && <AllSalesStatistics />}
+          {tab === "influencer-notifications" && <InfluencerNotifications />}
+          {tab === "my-files-and-videos" && <AllMyFilesAndVideos />}
+        </div>
       </div>
     </div>
   );

@@ -51,8 +51,7 @@ const CustomContainer = ({ name, icon, tab, isBorder, img }: Props) => {
       href={`/profile?tab=${tab}`}
       className={`flex items-center justify-between w-full py-2 px-4 border-cloud text-asphalt ${
         isBorder && "border-b"
-      }`}
-    >
+      }`}>
       <div className="flex items-center gap-4">
         <span className="p-3 rounded-full bg-cloud">{icon}</span>
         <p className="font-bold text-sm capitalize">{name}</p>
@@ -81,7 +80,7 @@ const influencerLinks = [
   {
     id: 1,
     name: "my files and videos",
-    tab: "my_files_and_videos",
+    tab: "my-files-and-videos",
     icon: <VideoIcon color="#455560" width="20" />,
   },
   {
@@ -263,13 +262,11 @@ const MobileSideBar = () => {
 
         <Link
           href="/profile?tab=notifications"
-          className="relative cursor-pointer"
-        >
+          className="relative cursor-pointer">
           <NotificationIcon />
           <div
             className="absolute w-4 h-4 rounded-full flex items-center justify-center rtl:left-[-2px]
-              ltr:right-[-2px] top-[-4px] bg-[#FF527B] border border-white font-bold text-white text-[10px]"
-          >
+              ltr:right-[-2px] top-[-4px] bg-[#FF527B] border border-white font-bold text-white text-[10px]">
             3
           </div>
         </Link>
@@ -310,8 +307,7 @@ const MobileSideBar = () => {
       <div className="bg-white rounded-lg flex flex-col">
         <div
           onClick={handleMenuChange}
-          className="cursor-pointer flex items-center justify-between w-full py-2 px-4 border-cloud text-asphalt border-b"
-        >
+          className="cursor-pointer flex items-center justify-between w-full py-2 px-4 border-cloud text-asphalt border-b">
           <div className="flex items-center gap-4">
             <span className="p-3 rounded-full bg-cloud">
               <LangSvg />
@@ -329,8 +325,7 @@ const MobileSideBar = () => {
 
         <div
           onClick={handleMenuCurrencyChange}
-          className="cursor-pointer flex items-center justify-between w-full py-2 px-4 border-cloud text-asphalt border-b"
-        >
+          className="cursor-pointer flex items-center justify-between w-full py-2 px-4 border-cloud text-asphalt border-b">
           <div className="flex items-center gap-4">
             <span className="p-3 rounded-full bg-cloud">
               <CurrencySvg />
@@ -348,8 +343,7 @@ const MobileSideBar = () => {
 
         <div
           onClick={handleMenuCountriesChange}
-          className="cursor-pointer flex items-center justify-between w-full py-2 px-4 text-asphalt"
-        >
+          className="cursor-pointer flex items-center justify-between w-full py-2 px-4 text-asphalt">
           <div className="flex items-center gap-4">
             <span className="p-3 rounded-full bg-cloud">
               <GlobalSvg />

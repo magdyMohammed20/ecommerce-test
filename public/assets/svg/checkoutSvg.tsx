@@ -5,8 +5,7 @@ export const AddressArrowDown = () => {
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      fill="none"
-    >
+      fill="none">
       <path
         d="M19.9201 8.94998L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.94998"
         stroke="#455560"
@@ -25,8 +24,7 @@ export const ImagesUploader = () => {
       width="29"
       height="28"
       viewBox="0 0 29 28"
-      fill="none"
-    >
+      fill="none">
       <path
         opacity="0.4"
         d="M11.0013 11.6667C12.29 11.6667 13.3346 10.622 13.3346 9.33333C13.3346 8.04467 12.29 7 11.0013 7C9.71264 7 8.66797 8.04467 8.66797 9.33333C8.66797 10.622 9.71264 11.6667 11.0013 11.6667Z"
@@ -68,26 +66,32 @@ export const ImagesUploader = () => {
   );
 };
 
-export const AddressEditIcon = () => {
+export const AddressEditIcon = ({
+  className,
+  isWhite,
+}: {
+  className?: string;
+  isWhite?: boolean;
+}) => {
   return (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      fill="none"
-    >
+      fill="none">
       <path
         opacity="0.4"
         d="M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13"
-        stroke="#455560"
+        stroke={isWhite ? "#FFF" : "#455560"}
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M16.0399 3.01999L8.15988 10.9C7.85988 11.2 7.55988 11.79 7.49988 12.22L7.06988 15.23C6.90988 16.32 7.67988 17.08 8.76988 16.93L11.7799 16.5C12.1999 16.44 12.7899 16.14 13.0999 15.84L20.9799 7.95999C22.3399 6.59999 22.9799 5.01999 20.9799 3.01999C18.9799 1.01999 17.3999 1.65999 16.0399 3.01999Z"
-        stroke="#455560"
+        stroke={isWhite ? "#FFF" : "#455560"}
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -96,7 +100,7 @@ export const AddressEditIcon = () => {
       <path
         opacity="0.4"
         d="M14.9102 4.14999C15.5802 6.53999 17.4502 8.40999 19.8502 9.08999"
-        stroke="#455560"
+        stroke={isWhite ? "#FFF" : "#455560"}
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -113,8 +117,7 @@ export const CheckboxIcon = () => {
       width="26"
       height="26"
       viewBox="0 0 26 26"
-      fill="none"
-    >
+      fill="none">
       <circle cx="13" cy="13" r="13" fill="#01010C" />
       <circle cx="13" cy="13" r="5" fill="white" />
     </svg>
@@ -128,8 +131,7 @@ export const UnCheckboxIcon = () => {
       width="26"
       height="26"
       viewBox="0 0 26 26"
-      fill="none"
-    >
+      fill="none">
       <circle cx="13" cy="13" r="12.5" stroke="#D9DCE1" />
     </svg>
   );
@@ -142,8 +144,7 @@ export const VisaIcon = () => {
       width="30"
       height="22"
       viewBox="0 0 30 22"
-      fill="none"
-    >
+      fill="none">
       <g clipPath="url(#clip0_2408_106286)">
         <rect
           y="0.368027"
@@ -181,8 +182,7 @@ export const MasterIcon = () => {
       width="31"
       height="22"
       viewBox="0 0 31 22"
-      fill="none"
-    >
+      fill="none">
       <g clipPath="url(#clip0_2408_106287)">
         <rect
           x="0.743164"
@@ -229,8 +229,7 @@ export const AExpressIcon = () => {
       width="31"
       height="22"
       viewBox="0 0 31 22"
-      fill="none"
-    >
+      fill="none">
       <g clipPath="url(#clip0_2408_106288)">
         <rect
           x="0.487305"
@@ -267,8 +266,7 @@ export const MadaIcon = () => {
       width="30"
       height="22"
       viewBox="0 0 30 22"
-      fill="none"
-    >
+      fill="none">
       <g clipPath="url(#clip0_2408_106289)">
         <rect
           x="0.230469"
@@ -347,8 +345,7 @@ export const TamaraIcon = () => {
       height="22"
       viewBox="0 0 68 22"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+      xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_2408_106302)">
         <path
           d="M67.356 0.368027H-0.422852V21.632H67.356V0.368027Z"
@@ -413,8 +410,7 @@ export const TamaraIcon = () => {
           y1="19.285"
           x2="51.7283"
           y2="-18.6628"
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0.01" stopColor="#AAE1FF" />
           <stop offset="0.427083" stopColor="#F9BD9A" />
           <stop offset="0.51" stopColor="#FFBC8C" />
@@ -429,8 +425,7 @@ export const TamaraIcon = () => {
           y1="9.14659"
           x2="7.71525"
           y2="47.5114"
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop stopColor="white" stopOpacity="0" />
           <stop offset="0.463182" stopColor="#CAEDFF" />
           <stop offset="1" stopColor="#98D6F7" stopOpacity="0" />
@@ -441,8 +436,7 @@ export const TamaraIcon = () => {
           y1="0.857431"
           x2="24.0295"
           y2="34.2794"
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0.01" stopColor="#FFE08B" />
           <stop offset="0.130208" stopColor="#FFE294" stopOpacity="0.590397" />
           <stop offset="0.303475" stopColor="#FFD972" stopOpacity="0" />
@@ -453,8 +447,7 @@ export const TamaraIcon = () => {
           cy="0"
           r="1"
           gradientUnits="userSpaceOnUse"
-          gradientTransform="translate(28.2505 10.9899) rotate(90) scale(8.45494 12.5366)"
-        >
+          gradientTransform="translate(28.2505 10.9899) rotate(90) scale(8.45494 12.5366)">
           <stop stopColor="#F8B483" stopOpacity="0.57" />
           <stop offset="1" stopColor="#F8B483" stopOpacity="0" />
         </radialGradient>
@@ -464,8 +457,7 @@ export const TamaraIcon = () => {
           cy="0"
           r="1"
           gradientUnits="userSpaceOnUse"
-          gradientTransform="translate(41.6835 17.6043) rotate(90) scale(10.7231 23.5106)"
-        >
+          gradientTransform="translate(41.6835 17.6043) rotate(90) scale(10.7231 23.5106)">
           <stop stopColor="#EB84A4" />
           <stop offset="0.755208" stopColor="#EB84A4" stopOpacity="0" />
         </radialGradient>
@@ -475,8 +467,7 @@ export const TamaraIcon = () => {
           cy="0"
           r="1"
           gradientUnits="userSpaceOnUse"
-          gradientTransform="translate(55.2594 27.9314) rotate(118.042) scale(6.69632 14.3571)"
-        >
+          gradientTransform="translate(55.2594 27.9314) rotate(118.042) scale(6.69632 14.3571)">
           <stop stopColor="#EB84A4" />
           <stop offset="0.755208" stopColor="#EB84A4" stopOpacity="0" />
         </radialGradient>
@@ -486,8 +477,7 @@ export const TamaraIcon = () => {
           y1="11.2539"
           x2="49.9662"
           y2="33.009"
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0.326812" stopColor="#EB84A4" stopOpacity="0" />
           <stop offset="1" stopColor="#9881BB" />
         </linearGradient>
@@ -512,8 +502,7 @@ export const StcPayIcon = () => {
       width="73"
       height="22"
       viewBox="0 0 73 22"
-      fill="none"
-    >
+      fill="none">
       <path
         d="M6.98791 21.632C9.20333 21.632 11.0254 20.9384 12.2262 19.7789C13.1269 18.8886 13.6549 17.6877 13.6549 16.3005C13.6549 15.0478 13.189 13.9194 12.3298 13.0601C11.4705 12.2009 10.2386 11.5694 8.68571 11.2692L6.139 10.7722C5.08305 10.5755 4.48261 10.0476 4.48261 9.31255C4.48261 8.34977 5.41433 7.68721 6.90508 7.68721C7.83681 7.68721 8.63394 7.98743 9.16192 8.51541C9.4932 8.87774 9.72095 9.34361 9.79342 9.87158L13.4685 9.04338C13.365 7.98743 12.8681 7.05571 12.1124 6.28963C10.9011 5.0991 9.04804 4.34337 6.86368 4.34337C4.84495 4.34337 3.1575 5.00593 1.98767 6.06188C0.993835 6.9936 0.434803 8.24624 0.434803 9.64383C0.434803 10.8654 0.828196 11.9007 1.62533 12.6874C2.42247 13.4846 3.58195 14.0747 5.10376 14.4474L7.6194 15.0478C8.8824 15.348 9.44143 15.8139 9.44143 16.6421C9.44143 17.667 8.50972 18.2674 6.98791 18.2674C5.89054 18.2674 5.00024 17.9051 4.4412 17.3046C4.04781 16.9113 3.8097 16.3729 3.77864 15.7828L0 16.611C0.103525 17.7394 0.6315 18.7333 1.42864 19.5304C2.68129 20.8452 4.71037 21.632 6.98791 21.632ZM34.9602 21.632C37.4138 21.632 39.2979 20.7417 40.592 19.4787C41.6169 18.4848 42.2484 17.3253 42.5796 16.1348L38.7078 14.8408C38.5422 15.4412 38.2109 16.0727 37.6829 16.5593C37.0514 17.1597 36.1922 17.5842 34.9602 17.5842C33.8318 17.5842 32.7759 17.1494 32.0098 16.3936C31.2437 15.5965 30.7778 14.437 30.7778 12.9773C30.7778 11.4866 31.2437 10.3581 32.0098 9.56101C32.7655 8.79493 33.8008 8.40153 34.9292 8.40153C36.1197 8.40153 36.9479 8.79493 37.5483 9.39537C38.0453 9.89229 38.3455 10.5238 38.5422 11.1553L42.4865 9.83017C42.1862 8.6707 41.5547 7.51122 40.6334 6.54844C39.3083 5.25439 37.3827 4.33302 34.836 4.33302C32.486 4.33302 30.3637 5.22333 28.8419 6.75549C27.3201 8.30836 26.3884 10.472 26.3884 12.9877C26.3884 15.5033 27.3512 17.6566 28.904 19.2199C30.4155 20.7417 32.5688 21.632 34.9602 21.632ZM21.5745 21.632C23.293 21.632 24.525 21.104 25.0529 20.6381V17.0562C24.6492 17.3564 23.8624 17.7187 22.8272 17.7187C22.0921 17.7187 21.5642 17.5531 21.1708 17.1908C20.8395 16.8595 20.6738 16.2901 20.6738 15.5344V0.368027H16.2948V4.84029H25.0426V9.08479H16.2948V16.611C16.2948 18.1328 16.7606 19.3648 17.5888 20.224C18.5205 21.135 19.8871 21.632 21.5745 21.632Z"
         fill="#502C84"
@@ -541,8 +530,7 @@ export const CashIcon = () => {
       width="34"
       height="38"
       viewBox="0 0 34 38"
-      fill="none"
-    >
+      fill="none">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -561,16 +549,14 @@ export const ApplePayIcon = () => {
       viewBox="0 0 60 34"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-    >
+      xmlnsXlink="http://www.w3.org/1999/xlink">
       <rect y="0.5" width="60" height="33" fill="url(#pattern0)" />
       <defs>
         <pattern
           id="pattern0"
           patternContentUnits="objectBoundingBox"
           width="1"
-          height="1"
-        >
+          height="1">
           <use
             xlinkHref="#image0_3027_104940"
             transform="matrix(0.00195312 0 0 0.00355114 0 -0.409091)"
@@ -603,8 +589,7 @@ export const ProductArrowLeft = ({
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      fill="none"
-    >
+      fill="none">
       <path
         d="M14.9998 19.92L8.47984 13.4C7.70984 12.63 7.70984 11.37 8.47984 10.6L14.9998 4.07999"
         stroke={isBlue ? "#5A46FA" : isWhite ? "#FFF" : "#455560"}
@@ -625,8 +610,7 @@ export const ProductClose = () => {
         height="32"
         viewBox="0 0 32 32"
         fill="none"
-        className="hidden md:block"
-      >
+        className="hidden md:block">
         <path
           d="M16.0013 30.3332C8.09464 30.3332 1.66797 23.9065 1.66797 15.9998C1.66797 8.09317 8.09464 1.6665 16.0013 1.6665C23.908 1.6665 30.3346 8.09317 30.3346 15.9998C30.3346 23.9065 23.908 30.3332 16.0013 30.3332ZM16.0013 3.6665C9.2013 3.6665 3.66797 9.19984 3.66797 15.9998C3.66797 22.7998 9.2013 28.3332 16.0013 28.3332C22.8013 28.3332 28.3346 22.7998 28.3346 15.9998C28.3346 9.19984 22.8013 3.6665 16.0013 3.6665Z"
           fill="#455560"
@@ -647,8 +631,7 @@ export const ProductClose = () => {
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        className="md:hidden"
-      >
+        className="md:hidden">
         <path
           d="M12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75ZM12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75Z"
           fill="#455560"
@@ -673,8 +656,7 @@ export const UserSearch = () => {
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      fill="none"
-    >
+      fill="none">
       <path
         d="M12 12.75C8.83 12.75 6.25 10.17 6.25 7C6.25 3.83 8.83 1.25 12 1.25C15.17 1.25 17.75 3.83 17.75 7C17.75 10.17 15.17 12.75 12 12.75ZM12 2.75C9.66 2.75 7.75 4.66 7.75 7C7.75 9.34 9.66 11.25 12 11.25C14.34 11.25 16.25 9.34 16.25 7C16.25 4.66 14.34 2.75 12 2.75Z"
         fill="#455560"
@@ -702,8 +684,7 @@ export const MapIcon = () => {
       width="22"
       height="22"
       viewBox="0 0 22 22"
-      fill="none"
-    >
+      fill="none">
       <path
         d="M10.9997 20.1667C16.0413 20.1667 20.1663 16.0417 20.1663 11C20.1663 5.95837 16.0413 1.83337 10.9997 1.83337C5.95801 1.83337 1.83301 5.95837 1.83301 11C1.83301 16.0417 5.95801 20.1667 10.9997 20.1667Z"
         stroke="#455560"
@@ -740,8 +721,7 @@ export const HomeIcon = ({ color }: Props) => {
       width="24"
       height="25"
       viewBox="0 0 24 25"
-      fill="none"
-    >
+      fill="none">
       <path
         opacity="0.34"
         fillRule="evenodd"
@@ -767,8 +747,7 @@ export const WorkIcon = ({ color }: Props) => {
       width="24"
       height="25"
       viewBox="0 0 24 25"
-      fill="none"
-    >
+      fill="none">
       <g opacity="0.4">
         <path
           d="M13.0692 15.8102L10.9492 13.7002"
@@ -841,8 +820,7 @@ export const FrinedIcon = ({ color }: Props) => {
       width="24"
       height="25"
       viewBox="0 0 24 25"
-      fill="none"
-    >
+      fill="none">
       <path
         d="M9.15957 11.37C9.05957 11.36 8.93957 11.36 8.82957 11.37C6.44957 11.29 4.55957 9.34 4.55957 6.94C4.55957 4.49 6.53957 2.5 8.99957 2.5C11.4496 2.5 13.4396 4.49 13.4396 6.94C13.4296 9.34 11.5396 11.29 9.15957 11.37Z"
         stroke={color}
@@ -884,8 +862,7 @@ export const PublicIcon = ({ color }: Props) => {
       width="24"
       height="25"
       viewBox="0 0 24 25"
-      fill="none"
-    >
+      fill="none">
       <path
         opacity="0.4"
         d="M11.9999 13.9299C13.723 13.9299 15.1199 12.5331 15.1199 10.8099C15.1199 9.08681 13.723 7.68994 11.9999 7.68994C10.2768 7.68994 8.87988 9.08681 8.87988 10.8099C8.87988 12.5331 10.2768 13.9299 11.9999 13.9299Z"
@@ -908,8 +885,7 @@ export const SuccessSvg = () => {
       height="258"
       viewBox="0 0 274 258"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+      xmlns="http://www.w3.org/2000/svg">
       <circle cx="135.407" cy="148.111" r="106.704" fill="#01010C" />
       <circle cx="263.612" cy="51.7592" r="10.3519" fill="#01010C" />
       <ellipse

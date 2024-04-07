@@ -1,4 +1,10 @@
-export const EarnsSVG = ({ color, width }: { color?: string; width?:string }) => {
+export const EarnsSVG = ({
+  color,
+  width,
+}: {
+  color?: string;
+  width?: string;
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +95,13 @@ export const MyReviewsSVG = ({ color }: { color?: string }) => {
   );
 };
 
-export const MyOrders = ({ color, width }: { color?: string; width?:string }) => {
+export const MyOrders = ({
+  color,
+  width,
+}: {
+  color?: string;
+  width?: string;
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +169,13 @@ export const OrdersSvg = ({ color }: { color: string }) => {
   );
 };
 
-export const StatsSVG = ({ color, width }: { color?: string; width?:string }) => {
+export const StatsSVG = ({
+  color,
+  width,
+}: {
+  color?: string;
+  width?: string;
+}) => {
   return (
     <svg
       width={width ? width : "24"}
@@ -546,9 +564,16 @@ export const LoadingSVG = () => {
   );
 };
 
-export const InfoSVG = () => {
+export const InfoSVG = ({
+  color,
+  className,
+}: {
+  color?: string;
+  className?: string;
+}) => {
   return (
     <svg
+      className={className}
       width="16"
       height="17"
       viewBox="0 0 20 20"
@@ -556,15 +581,15 @@ export const InfoSVG = () => {
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M10.0013 18.9584C5.05964 18.9584 1.04297 14.9417 1.04297 10.0001C1.04297 5.05841 5.05964 1.04175 10.0013 1.04175C14.943 1.04175 18.9596 5.05841 18.9596 10.0001C18.9596 14.9417 14.943 18.9584 10.0013 18.9584ZM10.0013 2.29175C5.7513 2.29175 2.29297 5.75008 2.29297 10.0001C2.29297 14.2501 5.7513 17.7084 10.0013 17.7084C14.2513 17.7084 17.7096 14.2501 17.7096 10.0001C17.7096 5.75008 14.2513 2.29175 10.0013 2.29175Z"
-        fill="#E42E59"
+        fill={color ? color : "#E42E59"}
       />
       <path
         d="M10 11.4584C9.65833 11.4584 9.375 11.1751 9.375 10.8334V6.66675C9.375 6.32508 9.65833 6.04175 10 6.04175C10.3417 6.04175 10.625 6.32508 10.625 6.66675V10.8334C10.625 11.1751 10.3417 11.4584 10 11.4584Z"
-        fill="#E42E59"
+        fill={color ? color : "#E42E59"}
       />
       <path
         d="M10.0013 14.1667C9.89297 14.1667 9.78464 14.1417 9.68464 14.1C9.58464 14.0583 9.49297 14 9.40964 13.925C9.33464 13.8417 9.2763 13.7583 9.23464 13.65C9.19297 13.55 9.16797 13.4417 9.16797 13.3333C9.16797 13.225 9.19297 13.1167 9.23464 13.0167C9.2763 12.9167 9.33464 12.825 9.40964 12.7417C9.49297 12.6667 9.58464 12.6083 9.68464 12.5667C9.88464 12.4833 10.118 12.4833 10.318 12.5667C10.418 12.6083 10.5096 12.6667 10.593 12.7417C10.668 12.825 10.7263 12.9167 10.768 13.0167C10.8096 13.1167 10.8346 13.225 10.8346 13.3333C10.8346 13.4417 10.8096 13.55 10.768 13.65C10.7263 13.7583 10.668 13.8417 10.593 13.925C10.5096 14 10.418 14.0583 10.318 14.1C10.218 14.1417 10.1096 14.1667 10.0013 14.1667Z"
-        fill="#E42E59"
+        fill={color ? color : "#E42E59"}
       />
     </svg>
   );
@@ -777,6 +802,107 @@ export const SeparatorSVG = () => {
         d="M1 19L1 1"
         stroke="#455560"
         strokeLinecap="round"
+      />
+    </svg>
+  );
+};
+
+export const HashSvg = () => {
+  return (
+    <svg
+      width="21"
+      height="20"
+      viewBox="0 0 21 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M8.83073 2.5L7.16406 17.5"
+        stroke="#455560"
+        strokeWidth="1.25"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M13.8307 2.5L12.1641 17.5"
+        stroke="#455560"
+        strokeWidth="1.25"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        opacity="0.4"
+        d="M3.41406 7.5H18.4141"
+        stroke="#455560"
+        strokeWidth="1.25"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        opacity="0.4"
+        d="M2.58594 12.5H17.5859"
+        stroke="#455560"
+        strokeWidth="1.25"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const EditIconSvg = () => {
+  return (
+    <svg
+      width="21"
+      height="20"
+      viewBox="0 0 21 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M11.5475 3.00002L4.70585 10.2417C4.44752 10.5167 4.19752 11.0584 4.14752 11.4334L3.83918 14.1334C3.73085 15.1084 4.43085 15.775 5.39752 15.6084L8.08085 15.15C8.45585 15.0834 8.98085 14.8084 9.23918 14.525L16.0809 7.28335C17.2642 6.03335 17.7975 4.60835 15.9558 2.86668C14.1225 1.14168 12.7308 1.75002 11.5475 3.00002Z"
+        stroke="#455560"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        opacity="0.4"
+        d="M10.4062 4.20898C10.7646 6.50898 12.6312 8.26732 14.9479 8.50065"
+        stroke="#455560"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        opacity="0.4"
+        d="M3 18.334H18"
+        stroke="#455560"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const OnPoint = () => {
+  return (
+    <svg
+      width="25"
+      height="24"
+      viewBox="0 0 25 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M12.4976 22.7501C7.41759 22.7501 2.98759 19.1401 1.96759 14.1701C1.88759 13.7601 2.14759 13.3701 2.54759 13.2801C2.95759 13.2001 3.34759 13.4601 3.43759 13.8601C4.31759 18.1401 8.12759 21.2501 12.4976 21.2501C16.8576 21.2501 20.6676 18.1601 21.5576 13.9001C21.6376 13.4901 22.0376 13.2301 22.4476 13.3201C22.8576 13.4001 23.1176 13.8001 23.0276 14.2101C21.9876 19.1501 17.5676 22.7501 12.4976 22.7501Z"
+        fill="white"
+      />
+      <path
+        d="M22.3109 10.8102C21.9609 10.8102 21.6509 10.5603 21.5809 10.2003C20.7309 5.88026 16.9109 2.74023 12.5009 2.74023C8.12093 2.74023 4.31093 5.85025 3.44093 10.1302C3.36093 10.5402 2.96093 10.7902 2.55093 10.7102C2.14093 10.6302 1.88093 10.2303 1.97093 9.82025C2.99093 4.85025 7.42093 1.24023 12.5009 1.24023C17.6309 1.24023 22.0609 4.89025 23.0509 9.91025C23.1309 10.3202 22.8609 10.7103 22.4609 10.7903C22.4109 10.8103 22.3609 10.8102 22.3109 10.8102Z"
+        fill="white"
+      />
+      <path
+        d="M12.5 14.25C11.26 14.25 10.25 13.24 10.25 12C10.25 10.76 11.26 9.75 12.5 9.75C13.74 9.75 14.75 10.76 14.75 12C14.75 13.24 13.74 14.25 12.5 14.25ZM12.5 11.25C12.09 11.25 11.75 11.59 11.75 12C11.75 12.41 12.09 12.75 12.5 12.75C12.91 12.75 13.25 12.41 13.25 12C13.25 11.59 12.91 11.25 12.5 11.25Z"
+        fill="white"
       />
     </svg>
   );
