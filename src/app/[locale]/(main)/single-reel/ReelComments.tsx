@@ -3,12 +3,12 @@ import { useTranslations } from "next-intl";
 
 import Image from "next/image";
 
-import { ProductClose } from "../../../../public/assets/svg/checkoutSvg";
+import { ProductClose } from "../../../../../public/assets/svg/checkoutSvg";
 import {
   AddComment,
   CloseSidebar,
   EmojiIcon,
-} from "../../../../public/assets/svg/singleReel";
+} from "../../../../../public/assets/svg/singleReel";
 import Comments from "./Comments";
 
 interface Props {
@@ -78,8 +78,7 @@ const ReelComments = ({ onClose }: Props) => {
                     <p
                       key={index}
                       className="text-2xl cursor-pointer"
-                      onClick={() => handleAddEmoji(emoji)}
-                    >
+                      onClick={() => handleAddEmoji(emoji)}>
                       {emoji}
                     </p>
                   ))
@@ -88,8 +87,7 @@ const ReelComments = ({ onClose }: Props) => {
             )}
             <form
               onSubmit={handleAddComment}
-              className="flex items-center gap-2"
-            >
+              className="flex items-center gap-2">
               <div className="border border-silver w-full max-w-14 h-14 rounded-full overflow-hidden">
                 <Image
                   src="/assets/images/profile/pro-info.png"

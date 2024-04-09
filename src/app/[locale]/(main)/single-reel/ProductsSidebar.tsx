@@ -9,9 +9,9 @@ import {
   BuyReel,
   CloseSidebar,
   FlashDealSvg,
-} from "../../../../public/assets/svg/singleReel";
-import ProductDetails from "../../../components/ProductDetails/ProductDetails";
-import { ProductClose } from "../../../../public/assets/svg/checkoutSvg";
+} from "../../../../../public/assets/svg/singleReel";
+import ProductDetails from "../../../../components/ProductDetails/ProductDetails";
+import { ProductClose } from "../../../../../public/assets/svg/checkoutSvg";
 
 const products = [
   {
@@ -60,8 +60,9 @@ const ProductsSidebar = ({ onClose }: Props) => {
 
           <div className="flex flex-col gap-3 md:gap-4 overflow-scroll hide-scrollbar">
             <div
-              className={`${locale === "ar" ? "flash-deal-ar" : "flash-deal"} text-sm md:text-base`}
-            >
+              className={`${
+                locale === "ar" ? "flash-deal-ar" : "flash-deal"
+              } text-sm md:text-base`}>
               <p className="p-[10px] rounded-full bg-white/30">
                 <FlashDealSvg />
               </p>
@@ -78,8 +79,7 @@ const ProductsSidebar = ({ onClose }: Props) => {
               <div
                 key={product.id}
                 onClick={handleProductDetails}
-                className="p-3 md:p-4 bg-white rounded-xl custome-shadow flex items-start justify-between gap-3 cursor-pointer"
-              >
+                className="p-3 md:p-4 bg-white rounded-xl custome-shadow flex items-start justify-between gap-3 cursor-pointer">
                 <div className="flex gap-3 md:gap-4">
                   <Image
                     src={product.image}
@@ -115,9 +115,7 @@ const ProductsSidebar = ({ onClose }: Props) => {
           <CloseSidebar />
         </p>
       </div>
-        {openProductDetails && (
-          <ProductDetails onClose={handleProductDetails} />
-        )}
+      {openProductDetails && <ProductDetails onClose={handleProductDetails} />}
     </div>
   );
 };

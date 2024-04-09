@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 
 import Image from "next/image";
-import { LikeIcon, ReplyIcon } from "../../../../public/assets/svg/singleReel";
+import {
+  LikeIcon,
+  ReplyIcon,
+} from "../../../../../public/assets/svg/singleReel";
 
 const commentsData = [
   {
@@ -210,25 +213,25 @@ const Comments = ({ addedComment }: Props) => {
                     onClick={() => handleLikedComment(item.id)}
                     className={`cursor-pointer ${
                       item.isLiked && "font-bold text-primary"
-                    }`}
-                  >
+                    }`}>
                     {t("Like")}
                   </p>
                   <p className="cursor-pointer">{t("Reply")}</p>
                 </div>
 
-                {item.likes !==0 &&  <div className="px-2 py-[2px] rounded-full bg-white text-sm flex items-center gap-2">
-                  <LikeIcon />
-                  <p>{item.likes}</p>
-                </div>}
+                {item.likes !== 0 && (
+                  <div className="px-2 py-[2px] rounded-full bg-white text-sm flex items-center gap-2">
+                    <LikeIcon />
+                    <p>{item.likes}</p>
+                  </div>
+                )}
               </div>
             </div>
             {item?.replies?.length > 0 &&
               (activeReply !== item.id ? (
                 <div
                   className="flex items-center gap-2 text-asphalt text-sm font-bold cursor-pointer"
-                  onClick={() => handleActiveReply(item.id)}
-                >
+                  onClick={() => handleActiveReply(item.id)}>
                   <ReplyIcon />
                   <p>
                     {t("View all replies")} ({item.replies.length})
@@ -260,8 +263,7 @@ const Comments = ({ addedComment }: Props) => {
                             <p
                               className={`cursor-pointer ${
                                 reply.isLiked && "font-bold text-primary"
-                              }`}
-                            >
+                              }`}>
                               {t("Like")}
                             </p>
                             <p className="cursor-pointer">{t("Reply")}</p>
