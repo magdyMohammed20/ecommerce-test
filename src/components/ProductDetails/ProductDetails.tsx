@@ -24,7 +24,7 @@ const ProductDetails = ({ onClose, isCart }: Props) => {
 
   return (
       <div className="fixed top-0 left-0 w-full h-full bg-black/60 flex items-center justify-center p-[60px] z-50">
-        <div className="w-full h-full max-w-[1281px] bg-cloud rounded-[20px] hidden lg:flex flex-col gap-6 p-8 max-h-[756px] overflow-scroll hide-scrollbar">
+        <div className="w-full h-fit max-w-[1281px] bg-cloud rounded-[20px] hidden lg:flex flex-col gap-6 p-8 max-h-[100%]">
           <div className="flex items-center justify-between h-full">
             <p className="text-20">{t("Product Details")}</p>
             <span className="cursor-pointer" onClick={onClose}>
@@ -32,7 +32,7 @@ const ProductDetails = ({ onClose, isCart }: Props) => {
             </span>
           </div>
 
-          <div className="bg-white rounded-xl grid grid-cols-2 py-8 h-full">
+          <div className="bg-white rounded-xl grid grid-cols-2 py-8">
             <div className="flex gap-2 px-8 border-cloud rtl:border-l ltr:border-r">
               <ReelGallery />
             </div>

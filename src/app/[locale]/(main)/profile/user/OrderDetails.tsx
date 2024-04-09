@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 
 import Image from "next/image";
@@ -14,6 +17,7 @@ import {
 } from "../../../../../../public/assets/svg/orders";
 import { ArrowDown } from "../../../../../../public/assets/svg/cart";
 import { ApplePayIcon } from "../../../../../../public/assets/svg/checkoutSvg";
+import Conversational from "@/app/[locale]/profile/user/Conversational/Conversational";
 
 const stepperData = [
   {
@@ -81,10 +85,15 @@ const products = [
 
 const OrderDetails = () => {
   const t = useTranslations();
+  const [openChat, setOpenChat] = useState<boolean>(false);
+
+  const handleChatChange = () => {
+    setOpenChat((prevState) => !prevState);
+  };
 
   return (
     <div className="flex flex-col gap-6 md:gap-8 w-full">
-      <GoBackLink title="Order Details" />
+      <GoBackLink title="Order Details" url="/profile?tab=orders" />
 
       <div className="profile-width-70 flex flex-col gap-4 md:gap-6 px-4 md:px-8 lg:px-0">
         <OrderStepper stepperData={stepperData} />
@@ -134,6 +143,17 @@ const OrderDetails = () => {
           </div>
         </div>
 
+        <div className="p-4 flex items-center justify-between rounded-12 bg-white">
+          <p className="font-bold text-sm">
+            {t("Do you want to return a product?")}
+          </p>
+          <button
+            onClick={handleChatChange}
+            className="btn-secondary !py-2 !w-fit">
+            {t("Return a product")}
+          </button>
+        </div>
+
         <div className="white-container flex flex-col gap-4 md:gap-6">
           <div className="flex items-center justify-between text-20 pb-4 md:pb-6 border-b border-b-cloud">
             <p>
@@ -169,6 +189,8 @@ const OrderDetails = () => {
           {t("Cancel Order")}
         </button>
       </div>
+
+      {openChat && <Conversational onClose={handleChatChange} />}
     </div>
   );
 };

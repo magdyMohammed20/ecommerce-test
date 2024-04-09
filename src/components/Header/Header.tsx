@@ -12,6 +12,9 @@ import { getCookie } from "@/app/actions";
 import SearchMenu from "./SearchMenu";
 import AccountMenu from "./AccountMenu";
 import LocalDropDown from "./LocalDropDown";
+import LoginRegister from "./LoginRegister";
+import CartToolTip from "../CartToolTip/CartToolTip";
+import CategoryMenuMobile from "../CategoryBar/CategoryMenuMobile";
 
 import {
   SearchIconSvg,
@@ -27,8 +30,7 @@ import {
   SearchIconSvgWhite,
   PersonIconSvg,
 } from "../../../public/assets/svg/headerSvgs";
-import CartToolTip from "../CartToolTip/CartToolTip";
-import LoginRegister from "./LoginRegister";
+import { Arrow24 } from "../../../public/assets/svg/categoryBarSvgs";
 
 const countries = [
   {
@@ -57,13 +59,15 @@ const countries = [
   },
 ];
 
+const data = ["/", "/cart", "/reels", "/sections", "/profile"];
+
 const Header = () => {
-  const searchParams = useSearchParams();
-  const userType = searchParams.get("user");
   const locale = useLocale();
   const t = useTranslations();
   const pathname = usePathname();
   const isCheck = pathname === "/profile";
+  const params = useSearchParams();
+  const isShow = params.get("tab") ? false : data.includes(pathname);
   const localeRef = useRef<any>(null);
   const accountRef = useRef<any>(null);
   const accountMobileRef = useRef<any>(null);
@@ -73,10 +77,10 @@ const Header = () => {
   const [searchInput, setSearchInput] = useState<boolean>(false);
   const [openLangMenu, setOpenLangMenu] = useState<boolean>(false);
   const [selectedCountry, setSelectedCountry] = useState(countries[0]);
+  const [openMenuMobile, setOpenMenuMobile] = useState<boolean>(false);
   const [openAccountMenu, setOpenAccountMenu] = useState<boolean>(false);
   const [openAccountMenuMobile, setOpenAccountMenuMobile] =
     useState<boolean>(false);
-  const currentPage = usePathname();
 
   useEffect(() => {
     let handler = (e: any) => {
@@ -133,8 +137,16 @@ const Header = () => {
     setOpenLogin(!openLogin);
   };
 
+  const openMenuMobileHandler = () => {
+    setOpenMenuMobile(!openMenuMobile);
+  };
+
   return (
-    <header className={`w-full ${isCheck ? "bg-primary" : "bg-white"}`}>
+    <header
+      className={`w-full ${
+        isCheck ? "bg-white md:bg-primary" : "bg-primary md:bg-white"
+      }`}
+    >
       <div className="py-4 global-slider-padding hidden lg:flex justify-between items-center w-full text-asphalt relative">
         <Link href="/">
           <Image
@@ -228,10 +240,10 @@ const Header = () => {
           {/* <button
             onClick={openLoginHandler}
             className={`${
-              isCheck ? "bg-secondary" : "bg-primary"
-            } flex items-center gap-1 rounded-full text-white font-bold py-3 px-4 whitespace-nowrap`}
+              isCheck ? "bg-secondary text-primary" : "bg-primary text-white"
+            } flex items-center gap-1 rounded-full font-bold py-3 px-4 whitespace-nowrap`}
           >
-            <PersonIconSvg />
+            <PersonIconSvg color="#01010C" />
             <p>{t("Register")}</p>
           </button> */}
 
@@ -304,13 +316,21 @@ const Header = () => {
       ) : (
         <div
           className={`${
-            isCheck && "bg-primary"
-          } py-5 px-4 md:py-6 md:px-8 flex justify-between items-center lg:hidden`}
+            isCheck ? "bg-primary" : "bg-white"
+          } p-4 md:py-6 md:px-8 flex justify-between items-center lg:hidden rounded-b-lg md:rounded-none`}
         >
           <div className="flex items-center gap-[10px]">
-            <Link href="profile">
-              {isCheck ? <MenuIconSvgWhite /> : <MenuIconSvg />}
-            </Link>
+            {isShow ? (
+              <div onClick={openMenuMobileHandler} className="cursor-pointer">
+                {isCheck ? <MenuIconSvgWhite /> : <MenuIconSvg />}
+              </div>
+            ) : (
+              <Link href={"/"}>
+                <span className="ltr:rotate-180">
+                  <Arrow24 color={isCheck ? "white" : "#455560"} />
+                </span>
+              </Link>
+            )}
             <Link href="/search-experience" className="hidden md:block">
               {isCheck ? <WishListIconSvgWhite /> : <WishListIconSvg />}
             </Link>
@@ -331,7 +351,15 @@ const Header = () => {
             />
           </Link>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
+            {!isShow && (
+              <Link
+                href="/cart"
+                className="cursor-pointer px-2 border-silver rtl:border-l ltr:border-l md:hidden"
+              >
+                {isCheck ? <CartIconSvgWhite /> : <CartIconSvg />}
+              </Link>
+            )}
             <div className="cursor-pointer" onClick={openSearchHandler}>
               {isCheck ? <SearchIconSvgWhite /> : <SearchIconSvg />}
             </div>
@@ -371,6 +399,11 @@ const Header = () => {
       )}
 
       {openLogin && <LoginRegister onClose={openLoginHandler} />}
+
+      <CategoryMenuMobile
+        openMenuMobile={openMenuMobile}
+        closeMenu={openMenuMobileHandler}
+      />
     </header>
   );
 };

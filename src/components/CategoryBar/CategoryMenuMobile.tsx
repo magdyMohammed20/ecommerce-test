@@ -1579,7 +1579,7 @@ const CategoryMenuMobile = ({ openMenuMobile, closeMenu }: Props) => {
       }`}
     >
       <div
-        className={`max-w-[618px] w-full fixed top-0 min-h-screen bg-cloud duration-500 ease-in-out overflow-scroll hide-scrollbar max-h-screen
+        className={`max-w-[390px] md:max-w-[618px] w-full fixed top-0 min-h-screen bg-cloud duration-500 ease-in-out overflow-scroll hide-scrollbar max-h-screen
       ${
         openMenuMobile
           ? locale === "ar"

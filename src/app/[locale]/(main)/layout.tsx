@@ -8,6 +8,7 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import HelpCenter from "@/components/HelpCenter/HelpCenter";
 import CategoryBar from "@/components/CategoryBar/CategoryBar";
+import NavigationBar from "@/components/NavigationBar/NavigationBar";
 
 import "swiper/css";
 import "./globals.css";
@@ -70,6 +71,7 @@ export default function RootLayout({
           <main className="bg-cloud min-h-screen">{children}</main>
           <HelpCenter />
           <Footer />
+          <NavigationBar />
         </NextIntlClientProvider>
       </body>
     </html>

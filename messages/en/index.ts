@@ -11,6 +11,7 @@ import helpCenter from "./helpCenter.json";
 import singleReel from "./singleReel.json";
 import categoryBar from "./categoryBar.json";
 import notifications from "./notifications.json";
+import companyRegister from "./companyRegister.json";
 import searchExperience from "./searchExperience.json";
 import marketingRequests from "./marketingRequests.json";
 
@@ -28,6 +29,7 @@ export default {
   ...influencer,
   ...categoryBar,
   ...notifications,
+  ...companyRegister,
   ...searchExperience,
   ...marketingRequests,
 };

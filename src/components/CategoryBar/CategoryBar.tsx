@@ -86,7 +86,6 @@ const CategoryBar = () => {
   const t = useTranslations();
   const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const [openMenuMobile, setOpenMenuMobile] = useState<boolean>(false);
   const [counter, setCounter] = useState<number>(0);
   const [status, setStatus] = useState<string>("");
 
@@ -104,17 +103,8 @@ const CategoryBar = () => {
     setOpenMenu(status);
   };
 
-  const openMenuMobileHandler = () => {
-    setOpenMenuMobile(!openMenuMobile);
-  };
-
   return (
-    <div
-      className={`${
-        (pathname === "/profile") &&
-        "hidden"
-      } bg-primary `}
-    >
+    <div className={`${pathname === "/profile" && "hidden"} bg-primary `}>
       <div
         className={`w-full global-padding-l-r global-slider-padding py-4 text-white text-sm leading-[14px] flex items-center justify-between gap-2 whitespace-nowrap relative
         ${openMenu && "z-50"}`}
@@ -122,9 +112,8 @@ const CategoryBar = () => {
       >
         <div className="flex items-center gap-2 w-full overflow-hidden">
           <div
-            className="md:flex items-center gap-2 md:gap-[1.111vw] cursor-pointer hover:text-secondary hidden"
+            className="lg:flex items-center gap-2 md:gap-[1.111vw] cursor-pointer hover:text-secondary hidden"
             onMouseEnter={() => openMenuHandler(true)}
-            onClick={openMenuMobileHandler}
           >
             <p>{t("All Categories")}</p>
             <ArrowDownIconSvg />
@@ -138,7 +127,7 @@ const CategoryBar = () => {
               clickable: true,
             }}
             modules={[Mousewheel]}
-            className="h-[23.62px]"
+            className="h-[23.62px] !mx-0"
             onMouseEnter={() => openMenuHandler(false)}
           >
             <SliderBtn counter={counter} status={status} />
@@ -146,11 +135,11 @@ const CategoryBar = () => {
               <SwiperSlide key={item.id} className="!w-fit">
                 <Link
                   href={item.link}
-                  className={`px-2 md:px-[1.111vw] border-white/50 h-full flex items-center cursor-pointer hover:text-secondary duration-300 ease-in-out
+                  className={`px-2 md:px-[1.111vw] border-white/50 h-full flex items-center hover:text-secondary duration-300 ease-in-out
             ${
               index !== categories.length - 1 &&
               (locale === "ar" ? "border-l" : "border-r")
-            } ${index === 0 && "md:!border-x"}
+            } ${index === 0 && "lg:!border-x"}
             `}
                 >
                   <p>{locale === "ar" ? item.nameInArabic : item.name}</p>
@@ -170,10 +159,6 @@ const CategoryBar = () => {
         </div>
 
         {openMenu && <CategoryMenu />}
-        <CategoryMenuMobile
-          openMenuMobile={openMenuMobile}
-          closeMenu={openMenuMobileHandler}
-        />
       </div>
       {openMenu && (
         <div

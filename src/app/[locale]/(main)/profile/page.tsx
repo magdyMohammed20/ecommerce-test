@@ -35,6 +35,7 @@ const UserPage = ({ searchParams }: { searchParams: { tab: string } }) => {
         {tab &&
           tab !== "list" &&
           tab !== "addresses" &&
+          tab !== "order_details" &&
           tab !== "marketing_requests" && (
             <GoBackLink
               title={tab == "show-all" ? "transfer requests" : tab}

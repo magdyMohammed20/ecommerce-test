@@ -169,5 +169,12 @@
   "Saudi": "السعوديه",
   "Qatar": "قطر",
   "UAE": "الإمارات",
-  "Kuwait": "الكويت"
+  "Kuwait": "الكويت",
+  "Do you want to return a product?": "هل تريد ارجاع منتج ما؟",
+  "Return a product": "إرجاع منتج",
+  "Welcome Ahlam": "أهلاً وسهلا أحلام",
+  "I'm here to help you return products": "أنا هنا لمساعدتك في إرجاع المنتجات",
+  "Select the product you would like to return": "حدد المنتج الذي ترغب في إرجاعه",
+  "The product you would like to return!": "المنتج الذي ترغب في إرجاعه!",
+  "Thank you, but why would you want to return it?": "شكراً لك، ولكن لماذا ترغب في إرجاعه"
 }

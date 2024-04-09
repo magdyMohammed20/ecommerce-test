@@ -46,15 +46,15 @@ const ReelGallery = () => {
       {images.map((image, index) => (
         <div
           key={index}
-          className="rounded-lg relative overflow-hidden cursor-pointer w-full h-full"
+          className="rounded-lg relative overflow-hidden cursor-pointer"
           onClick={() => handleImageChange(index)}
         >
           <Image
             src={image}
             alt="product"
-            width={96}
-            height={142.8}
-            className="w-full h-full object-cover"
+            width={80}
+            height={100}
+            className="object-cover"
           />
           {index !== activeIndex && (
             <div className="absolute bg-black/40 top-0 w-full h-full"></div>

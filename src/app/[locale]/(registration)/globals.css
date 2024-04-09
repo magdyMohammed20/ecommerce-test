@@ -147,6 +147,15 @@
   backdrop-filter: blur(40px);
 }
 
+.register-bg {
+  background: linear-gradient(
+      93deg,
+      rgba(155, 243, 129, 0.12) 1.64%,
+      rgba(90, 70, 250, 0.12) 99.68%
+    ),
+    #fff;
+}
+
 @layer utilities {
   .global-width {
     @apply w-full max-w-[1536px] mx-auto;

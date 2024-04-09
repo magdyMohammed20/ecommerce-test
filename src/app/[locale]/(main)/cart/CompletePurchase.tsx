@@ -18,14 +18,14 @@ const CompletePurchase = () => {
         {t("Complete Purchase")} (4590 {t("SAR")})
       </Link>
 
-      <div className="bg-white fixed bottom-0 w-full px-[21px] md:px-6 py-6 pb-2 left-0 right-0 lg:hidden z-[9] flex flex-col gap-[21px] items-center">
+      <div className="bg-white fixed bottom-20 md:bottom-0 w-full px-[21px] md:px-6 py-6 pb-2 left-0 right-0 lg:hidden z-[9] flex flex-col gap-[21px] items-center">
         <Link
           href="/checkout"
           className="bg-primary w-full p-4 flex items-center justify-center rounded-full text-white font-bold text-base"
         >
           {t("Complete Purchase")} (4590 {t("SAR")})
         </Link>
-        <div className="h-[5px] w-[134px] bg-primary rounded-full"></div>
+        <div className="h-[5px] w-[134px] bg-primary rounded-full hidden md:block"></div>
       </div>
     </div>
   );
