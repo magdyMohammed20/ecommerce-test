@@ -7,7 +7,10 @@ import TopBar from "./TopBar";
 import SerachFilter from "./SerachFilter";
 import SerachedItems from "./SerachedItems";
 import SerachFilterMobile from "./SearchFilterMobile";
-import { FilterBtn, RankBtn } from "../../../../public/assets/svg/searchSvgs";
+import {
+  FilterBtn,
+  RankBtn,
+} from "../../../../../public/assets/svg/searchSvgs";
 import SortByMenu from "./SortByMenu";
 
 const filterData = ["products", "reels"];
@@ -97,15 +100,13 @@ const MainContainer = () => {
           <div className="bg-primary rounded-full py-5 px-8 flex items-center gap-4 text-white cursor-pointer font-bold capitalize">
             <div
               className="flex items-center gap-2 ltr:pr-4 ltr:border-r rtl:pl-4 rtl:border-l border-silver/50"
-              onClick={handleSortBy}
-            >
+              onClick={handleSortBy}>
               <RankBtn />
               <p>{t("ranking")}</p>
             </div>
             <div
               className="flex items-center gap-2"
-              onClick={handleMobileFilter}
-            >
+              onClick={handleMobileFilter}>
               <FilterBtn />
               <p>{t("filtering")}</p>
             </div>

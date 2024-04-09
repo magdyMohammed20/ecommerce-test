@@ -14,17 +14,16 @@ import StarRate from "@/components/StarRate/StarRate";
 
 import { Checkbox } from "@mui/material";
 
-
 import {
   CloseFilter,
   DeleteFilterIcon,
   DropDownArrow,
   SettingIcon,
-} from "../../../../public/assets/svg/searchSvgs";
+} from "../../../../../public/assets/svg/searchSvgs";
 import {
   UnCheckboxIcon,
   CheckboxIcon,
-} from "../../../../public/assets/svg/checkoutSvg";
+} from "../../../../../public/assets/svg/checkoutSvg";
 
 const items = [
   {
@@ -108,8 +107,7 @@ const SerachFilterMobile = ({
           {filterItems.map((item, index) => (
             <div
               key={index}
-              className="bg-asphalt/10 rounded-full py-1 px-2 rtl:pr-3 ltr:pl-3 flex items-center gap-2 text-primary text-sm"
-            >
+              className="bg-asphalt/10 rounded-full py-1 px-2 rtl:pr-3 ltr:pl-3 flex items-center gap-2 text-primary text-sm">
               {item.categoryName === "Price" ? (
                 <p className="opacity-70">
                   {item.min} {t("SAR")} - {item.max} {t("SAR")}
@@ -124,8 +122,7 @@ const SerachFilterMobile = ({
                 <div className="flex items-center gap-2">
                   <div
                     className="rounded-full w-3 h-3"
-                    style={{ background: item.color }}
-                  ></div>
+                    style={{ background: item.color }}></div>
                   <p className="opacity-70">{item.name}</p>
                 </div>
               ) : (
@@ -133,8 +130,7 @@ const SerachFilterMobile = ({
               )}
               <div
                 className="cursor-pointer"
-                onClick={() => removeItem(item.name)}
-              >
+                onClick={() => removeItem(item.name)}>
                 <DeleteFilterIcon />
               </div>
             </div>
@@ -143,8 +139,7 @@ const SerachFilterMobile = ({
           {filterItems.length > 0 && (
             <p
               className="font-bold text-sm text-primary cursor-pointer"
-              onClick={removeAll}
-            >
+              onClick={removeAll}>
               {t("Remove All")}
             </p>
           )}
@@ -155,14 +150,12 @@ const SerachFilterMobile = ({
             <div className="py-4 border-b-cloud">
               <div
                 onClick={handleOpenOffer}
-                className="flex items-center justify-between cursor-pointer mb-4"
-              >
+                className="flex items-center justify-between cursor-pointer mb-4">
                 <p className="font-bold">{t("offer")}</p>
                 <motion.span
                   animate={{ rotate: openOffer ? 180 : 0 }}
                   transition={{ duration: 0.5 }}
-                  className="p-1 bg-cloud rounded-full"
-                >
+                  className="p-1 bg-cloud rounded-full">
                   <DropDownArrow />
                 </motion.span>
               </div>
@@ -173,8 +166,7 @@ const SerachFilterMobile = ({
                     <div
                       key={item.id}
                       onClick={() => handleItemChange(item.name)}
-                      className="flex items-center justify-between cursor-pointer py-2"
-                    >
+                      className="flex items-center justify-between cursor-pointer py-2">
                       <p className="text-primary font-bold text-sm">
                         {t(item.name)}
                       </p>
@@ -195,18 +187,15 @@ const SerachFilterMobile = ({
                 key={item.id}
                 className={`py-4 border-b-cloud ${
                   item.id !== data[data.length - 1].id && "border-b"
-                }`}
-              >
+                }`}>
                 <div
                   onClick={() => handleMenuChange(item.id)}
-                  className="flex items-center justify-between cursor-pointer mb-4"
-                >
+                  className="flex items-center justify-between cursor-pointer mb-4">
                   <p className="font-bold">{item.name}</p>
                   <motion.span
                     animate={{ rotate: selectedMenuId === item.id ? 180 : 0 }}
                     transition={{ duration: 0.5 }}
-                    className="p-1 bg-cloud rounded-full"
-                  >
+                    className="p-1 bg-cloud rounded-full">
                     <DropDownArrow />
                   </motion.span>
                 </div>

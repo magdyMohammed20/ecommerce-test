@@ -20,8 +20,8 @@ import {
   TamaraIcon,
   UnCheckboxIcon,
   VisaIcon,
-} from "../../../../public/assets/svg/checkoutSvg";
-import { WalletIcon } from "../../../../public/assets/svg/profile";
+} from "../../../../../public/assets/svg/checkoutSvg";
+import { WalletIcon } from "../../../../../public/assets/svg/profile";
 
 const paymentMethods = [
   {
@@ -86,8 +86,7 @@ const AddressPayment = () => {
         {addresses.map((item) => (
           <div
             key={item.name}
-            className="bg-cloud p-3 lg:p-4 flex justify-between rounded-xl"
-          >
+            className="bg-cloud p-3 lg:p-4 flex justify-between rounded-xl">
             <div className="flex gap-3 lg:gap-4 items-start">
               <Checkbox
                 checked={true}
@@ -112,8 +111,7 @@ const AddressPayment = () => {
             addresses.length > 0
               ? "bg-primary text-white"
               : "bg-silver/70 text-asphalt"
-          }`}
-        >
+          }`}>
           {addresses.length > 0 ? t("Add New Address") : t("Add Address")}
         </button>
       </div>
@@ -135,13 +133,11 @@ const AddressPayment = () => {
               key={method.id}
               className={`py-4 flex flex-col w-full gap-6 border-b-silver/30 ${
                 index !== paymentMethods.length - 1 && "border-b"
-              }`}
-            >
+              }`}>
               <div className="flex items-center justify-between">
                 <div
                   className="flex items-center gap-4 cursor-pointer"
-                  onClick={() => handlePaymentChange(method.id)}
-                >
+                  onClick={() => handlePaymentChange(method.id)}>
                   <Checkbox
                     checked={method.id === selectedPayment ? true : false}
                     className="!p-0"
@@ -153,8 +149,7 @@ const AddressPayment = () => {
                       method.id === selectedPayment
                         ? "font-bold"
                         : "text-asphalt"
-                    }`}
-                  >
+                    }`}>
                     {t(method.name)}
                   </p>
                 </div>
