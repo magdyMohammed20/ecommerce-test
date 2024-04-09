@@ -3,11 +3,11 @@ import { useTranslations } from "next-intl";
 
 import { Checkbox } from "@mui/material";
 
-import { CloseFilter } from "../../../../public/assets/svg/searchSvgs";
+import { CloseFilter } from "../../../../../public/assets/svg/searchSvgs";
 import {
   CheckboxIcon,
   UnCheckboxIcon,
-} from "../../../../public/assets/svg/checkoutSvg";
+} from "../../../../../public/assets/svg/checkoutSvg";
 
 const items = [
   {
@@ -59,14 +59,13 @@ const SortByMenu = ({ onClose }: Props) => {
             <div
               key={item.id}
               onClick={() => handleItemChange(item.name)}
-              className="flex items-center justify-between cursor-pointer p-4 rounded-xl bg-white"
-            >
+              className="flex items-center justify-between cursor-pointer p-4 rounded-xl bg-white">
               <p
-                className={`text-sm ${selectedItem === item.name
+                className={`text-sm ${
+                  selectedItem === item.name
                     ? "text-primary font-bold"
                     : "text-asphalt"
-                  }`}
-              >
+                }`}>
                 {t(item.name)}
               </p>
               <Checkbox
@@ -79,11 +78,14 @@ const SortByMenu = ({ onClose }: Props) => {
           ))}
         </div>
 
-        {selectedItem &&
+        {selectedItem && (
           <div className="absolute bottom-0 bg-white w-full py-6 px-[21px] md:px-8">
-            <button className="btn-primary" onClick={onClose}>{t("Apply")} <span className="text-xs font-normal"> (104 {t("items")})</span></button>
+            <button className="btn-primary" onClick={onClose}>
+              {t("Apply")}{" "}
+              <span className="text-xs font-normal"> (104 {t("items")})</span>
+            </button>
           </div>
-        }
+        )}
       </div>
     </div>
   );

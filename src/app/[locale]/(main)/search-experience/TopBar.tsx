@@ -1,14 +1,14 @@
 import { useTranslations } from "next-intl";
 
-import { ShareIconSvg } from "../../../../public/assets/svg/product";
-import { SearchedFilter } from "../../../../public/assets/svg/searchMenu";
+import { ShareIconSvg } from "../../../../../public/assets/svg/product";
+import { SearchedFilter } from "../../../../../public/assets/svg/searchMenu";
 import {
   AllIcon,
   CategoryIcon,
   InfluencerIcon,
   ProductIcon,
   ReelsIcon,
-} from "../../../../public/assets/svg/searchSvgs";
+} from "../../../../../public/assets/svg/searchSvgs";
 
 const types = [
   {
@@ -82,20 +82,17 @@ const TopBar = ({ onChange, searchType }: Props) => {
               className={`p-1 flex items-center cursor-pointer rounded-full ${
                 searchType === type.value && "bg-cloud"
               }`}
-              onClick={() => onChange(type.value)}
-            >
+              onClick={() => onChange(type.value)}>
               <div
                 className={`p-2 rounded-full ${
                   searchType === type.value ? "bg-primary" : "bg-cloud"
-                }`}
-              >
+                }`}>
                 {searchType === type.value ? type.icon.light : type.icon.dark}
               </div>
               <p
                 className={`mx-3 font-bold whitespace-nowrap ${
                   searchType !== type.value && "text-asphalt"
-                }`}
-              >
+                }`}>
                 {t(type.name)}
               </p>
             </div>

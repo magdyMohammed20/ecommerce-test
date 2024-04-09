@@ -15,7 +15,7 @@ import ColorFilter from "@/components/SearchFilterComponents/ColorFilter";
 import {
   DropDownArrow,
   SettingIcon,
-} from "../../../../public/assets/svg/searchSvgs";
+} from "../../../../../public/assets/svg/searchSvgs";
 
 interface FilterItems {
   name: string;
@@ -66,18 +66,15 @@ const SerachFilter = ({ onChange, filterItems, removeItem }: Props) => {
               key={item.id}
               className={`py-4 border-b-cloud ${
                 item.id !== data[data.length - 1].id && "border-b"
-              }`}
-            >
+              }`}>
               <div
                 onClick={() => handleMenuChange(item.id)}
-                className="flex items-center justify-between cursor-pointer mb-4"
-              >
+                className="flex items-center justify-between cursor-pointer mb-4">
                 <p className="font-bold">{item.name}</p>
                 <motion.span
                   animate={{ rotate: selectedMenuId === item.id ? 180 : 0 }}
                   transition={{ duration: 0.5 }}
-                  className="p-1 bg-cloud rounded-full"
-                >
+                  className="p-1 bg-cloud rounded-full">
                   <DropDownArrow />
                 </motion.span>
               </div>

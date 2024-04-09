@@ -14,7 +14,7 @@ import {
   FilterStar,
   ProductIcon,
   ReelsIcon,
-} from "../../../../public/assets/svg/searchSvgs";
+} from "../../../../../public/assets/svg/searchSvgs";
 
 const dropdown1 = {
   label: "offer",
@@ -108,8 +108,7 @@ const SerachedItems = ({
             {filterItems.map((item, index) => (
               <div
                 key={index}
-                className="bg-asphalt/10 rounded-full py-1 px-2 pl-3 flex items-center gap-2 text-primary text-sm"
-              >
+                className="bg-asphalt/10 rounded-full py-1 px-2 pl-3 flex items-center gap-2 text-primary text-sm">
                 {item.categoryName === "Price" ? (
                   <p className="opacity-70">
                     {item.min} {t("SAR")} - {item.max} {t("SAR")}
@@ -117,13 +116,14 @@ const SerachedItems = ({
                 ) : item.categoryName === "Rate" ? (
                   <StarRate rate={parseInt(item.name)} starSize={14} />
                 ) : item.categoryName === "Size" ? (
-                  <p className="opacity-70">{t("Size")} {item.name}</p>
+                  <p className="opacity-70">
+                    {t("Size")} {item.name}
+                  </p>
                 ) : item.categoryName === "Color" ? (
                   <div className="flex items-center gap-2">
                     <div
                       className="rounded-full w-3 h-3"
-                      style={{ background: item.color }}
-                    ></div>
+                      style={{ background: item.color }}></div>
                     <p className="opacity-70">{item.name}</p>
                   </div>
                 ) : (
@@ -131,8 +131,7 @@ const SerachedItems = ({
                 )}
                 <div
                   className="cursor-pointer"
-                  onClick={() => removeItem(item.name)}
-                >
+                  onClick={() => removeItem(item.name)}>
                   <DeleteFilterIcon />
                 </div>
               </div>
@@ -141,8 +140,7 @@ const SerachedItems = ({
             {filterItems.length > 0 && (
               <p
                 className="font-bold text-sm text-primary cursor-pointer"
-                onClick={removeAll}
-              >
+                onClick={removeAll}>
                 {t("Remove All")}
               </p>
             )}
