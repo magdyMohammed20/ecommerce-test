@@ -8,11 +8,14 @@
   "Order summary": "ملخص الطلب",
   "Discount code": "كود الخصم",
   "Such as:": "مثل:",
+  "Such as2": "مثال:",
   "Apply": "تطبيق",
   "Subtotal": "المجموع الفرعي",
   "Shipping fees": "رسوم الشحن",
   "Discount": "خصم",
   "Total": "الإجمالي ",
   "VAT included": "تتضمن الـ VAT",
-  "Quantity:": "العدد:"
+  "Quantity:": "العدد:",
+  "expired_code": "عذرًا، انتهت صلاحية كود الخصم",
+  "Discount code applied": "تم تطبيق كود الخصم"
 }

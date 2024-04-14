@@ -4,11 +4,6 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
-import HelpCenter from "@/components/HelpCenter/HelpCenter";
-import CategoryBar from "@/components/CategoryBar/CategoryBar";
-
 import "swiper/css";
 import "./globals.css";
 

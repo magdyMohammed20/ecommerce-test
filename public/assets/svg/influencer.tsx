@@ -359,9 +359,10 @@ export const ArrowRightSVG = () => {
     </svg>
   );
 };
-export const InfoIconSVG = () => {
+export const InfoIconSVG = ({ className }: { className?: string }) => {
   return (
     <svg
+      className={className}
       width="16"
       height="16"
       viewBox="0 0 16 16"
@@ -505,9 +506,10 @@ export const SecondCalenderSVG = ({
   );
 };
 
-export const TickCircleSVG = () => {
+export const TickCircleSVG = ({ className }: { className?: string }) => {
   return (
     <svg
+      className={className}
       width="16"
       height="17"
       viewBox="0 0 20 20"
@@ -903,6 +905,121 @@ export const OnPoint = () => {
       <path
         d="M12.5 14.25C11.26 14.25 10.25 13.24 10.25 12C10.25 10.76 11.26 9.75 12.5 9.75C13.74 9.75 14.75 10.76 14.75 12C14.75 13.24 13.74 14.25 12.5 14.25ZM12.5 11.25C12.09 11.25 11.75 11.59 11.75 12C11.75 12.41 12.09 12.75 12.5 12.75C12.91 12.75 13.25 12.41 13.25 12C13.25 11.59 12.91 11.25 12.5 11.25Z"
         fill="white"
+      />
+    </svg>
+  );
+};
+
+export const AddIconCircleSvg = () => {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M9 16.6875C4.75961 16.6875 1.3125 13.2404 1.3125 9C1.3125 4.75961 4.75961 1.3125 9 1.3125C13.2404 1.3125 16.6875 4.75961 16.6875 9C16.6875 13.2404 13.2404 16.6875 9 16.6875ZM9 1.6875C4.96789 1.6875 1.6875 4.96789 1.6875 9C1.6875 13.0321 4.96789 16.3125 9 16.3125C13.0321 16.3125 16.3125 13.0321 16.3125 9C16.3125 4.96789 13.0321 1.6875 9 1.6875Z"
+        fill="#5A46FA"
+        stroke="#5A46FA"
+        stroke-width="0.75"
+      />
+      <path
+        d="M12 9.5625H6C5.6925 9.5625 5.4375 9.3075 5.4375 9C5.4375 8.6925 5.6925 8.4375 6 8.4375H12C12.3075 8.4375 12.5625 8.6925 12.5625 9C12.5625 9.3075 12.3075 9.5625 12 9.5625Z"
+        fill="#5A46FA"
+      />
+      <path
+        d="M9 12.5625C8.6925 12.5625 8.4375 12.3075 8.4375 12V6C8.4375 5.6925 8.6925 5.4375 9 5.4375C9.3075 5.4375 9.5625 5.6925 9.5625 6V12C9.5625 12.3075 9.3075 12.5625 9 12.5625Z"
+        fill="#5A46FA"
+      />
+    </svg>
+  );
+};
+export const OutlinedStartSvg = () => {
+  return (
+    <svg
+      width="33"
+      height="32"
+      viewBox="0 0 33 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M20.852 6.94602L22.7319 10.706C22.9853 11.226 23.6653 11.7193 24.2386 11.826L27.6386 12.386C29.812 12.746 30.3186 14.3193 28.7586 15.8927L26.1053 18.546C25.6653 18.986 25.412 19.8527 25.5587 20.4793L26.3186 23.7594C26.9186 26.346 25.532 27.3593 23.252 25.9993L20.0653 24.106C19.4919 23.7593 18.532 23.7593 17.9586 24.106L14.7719 25.9993C12.4919 27.346 11.1053 26.346 11.7053 23.7594L12.4653 20.4793C12.612 19.866 12.3586 18.9993 11.9186 18.546L9.26531 15.8927C7.70531 14.3327 8.21198 12.7593 10.3853 12.386L13.7853 11.826C14.3586 11.7327 15.0386 11.226 15.292 10.706L17.172 6.94602C18.172 4.90602 19.8253 4.90602 20.852 6.94602Z"
+        stroke="#01010C"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        opacity="0.4"
+        d="M10.9922 6.66699H2.99219"
+        stroke="#01010C"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        opacity="0.4"
+        d="M6.99219 25.333H2.99219"
+        stroke="#01010C"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        opacity="0.4"
+        d="M4.32552 16H2.99219"
+        stroke="#01010C"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const OutlinedCompSvg = () => {
+  return (
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        opacity="0.4"
+        d="M4.0026 22.6663V17.333M28.0026 22.6663V17.333M6.07668 27.9997H25.9285C28.5468 27.9997 30.6693 25.8772 30.6693 23.2589V23.2589C30.6693 22.9317 30.404 22.6663 30.0767 22.6663H1.92853C1.60125 22.6663 1.33594 22.9317 1.33594 23.2589V23.2589C1.33594 25.8772 3.45844 27.9997 6.07668 27.9997Z"
+        stroke="#455560"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M28 17.3333V12.5333C28 9.54639 28 8.05291 27.4187 6.91205C26.9074 5.90852 26.0915 5.09262 25.088 4.5813C23.9471 4 22.4536 4 19.4667 4H12.5333C9.54639 4 8.05291 4 6.91205 4.5813C5.90852 5.09262 5.09262 5.90852 4.5813 6.91205C4 8.05291 4 9.54639 4 12.5333V17.3333"
+        stroke="#455560"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const OutlinedElecSvg = () => {
+  return (
+    <svg
+      width="33"
+      height="32"
+      viewBox="0 0 33 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M8.7855 17.7082H12.9055V27.3082C12.9055 29.5482 14.1188 30.0015 15.5988 28.3215L25.6922 16.8548C26.9322 15.4548 26.4122 14.2948 24.5322 14.2948H20.4122V4.69482C20.4122 2.45482 19.1988 2.00149 17.7188 3.68149L7.6255 15.1482C6.39883 16.5615 6.91883 17.7082 8.7855 17.7082Z"
+        stroke="#455560"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

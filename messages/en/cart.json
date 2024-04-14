@@ -8,11 +8,14 @@
   "Order summary": "Order summary",
   "Discount code": "Discount code",
   "Such as:": "Such as:",
+  "Such as2": "Such as:",
   "Apply": "Apply",
   "Subtotal": "Subtotal",
   "Shipping fees": "Shipping fees",
   "Discount": "Discount",
   "Total": "Total",
   "VAT included": "VAT included",
-  "Quantity:": "Quantity:"
+  "Quantity:": "Quantity:",
+  "expired_code": "Sorry, the discount code has expired",
+  "Discount code applied": "Discount code has been applied"
 }

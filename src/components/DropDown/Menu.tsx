@@ -11,9 +11,19 @@ interface Props {
   onChange: (name: string) => void;
   onClose?: () => void;
   isRounded?: boolean;
+  isDiff?: boolean;
+  selectedValue?: string;
 }
 
-const Menu = ({ items, isRounded, onChange, onClose, className }: Props) => {
+const Menu = ({
+  items,
+  isRounded,
+  onChange,
+  onClose,
+  className,
+  isDiff,
+  selectedValue,
+}: Props) => {
   const t = useTranslations();
   const menuRef = useRef<any>(null);
   const [openUpwards, setOpenUpwards] = useState<boolean>(false);
@@ -46,6 +56,10 @@ const Menu = ({ items, isRounded, onChange, onClose, className }: Props) => {
     onChange(value);
   };
 
+  const handleDiffItemChange = (value: string) => {
+    onChange(value);
+  };
+
   return (
     <div
       ref={menuRef}
@@ -53,19 +67,32 @@ const Menu = ({ items, isRounded, onChange, onClose, className }: Props) => {
       ${openUpwards ? "bottom-14" : "top-14"} ${className} ${
         isRounded && "h-[200px] lg:h-[300px] overflow-y-scroll hide-scrollbar"
       }`}>
-      {items?.map((item) => (
-        <div
-          key={item.id}
-          onClick={() => handleItemChange(item?.name)}
-          className={`flex items-center gap-4 px-2 py-3 rounded-lg w-full cursor-pointer hover:bg-cloud ${
-            selectedItem === item?.name && "bg-cloud"
-          }`}>
-          <p>{item?.icon}</p>
-          <p className={`${selectedItem === item?.name && "font-bold"}`}>
-            {onClose ? item?.name : t(item?.name)}
-          </p>
-        </div>
-      ))}
+      {isDiff
+        ? items?.map((item) => (
+            <div
+              key={item.id}
+              onClick={() => handleDiffItemChange(item?.name)}
+              className={`flex items-center gap-4 px-2 py-3 rounded-lg w-full cursor-pointer ${
+                selectedValue === item?.name ? "bg-cloud" : "hover:bg-cloud"
+              }`}>
+              <p className={`${selectedValue == item?.name && "font-bold"}`}>
+                {t(item?.name)}
+              </p>
+            </div>
+          ))
+        : items?.map((item) => (
+            <div
+              key={item.id}
+              onClick={() => handleItemChange(item?.name)}
+              className={`flex items-center gap-4 px-2 py-3 rounded-lg w-full cursor-pointer hover:bg-cloud ${
+                selectedItem === item?.name && "bg-cloud"
+              }`}>
+              <p>{item?.icon}</p>
+              <p className={`${selectedItem === item?.name && "font-bold"}`}>
+                {onClose ? item?.name : t(item?.name)}
+              </p>
+            </div>
+          ))}
     </div>
   );
 };
