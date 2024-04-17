@@ -26,7 +26,7 @@ import MarketingRequests from "./influencer/marketingRequests/MarketingRequests"
 import AllSalesStatistics from "./influencer/sellesStatistics/AllSalesStatistics";
 import InfluencerNotifications from "./influencer/Notifications/InfluencerNotifications";
 import AllMyFilesAndVideos from "./influencer/myFilesAndVideos/allReels";
-
+import SearchPage from "./influencer/search/SearchPage";
 const UserPage = ({ searchParams }: { searchParams: { tab: string } }) => {
   const tab = searchParams.tab;
   return (
@@ -72,6 +72,7 @@ const UserPage = ({ searchParams }: { searchParams: { tab: string } }) => {
         {tab === "selles-statistics" && <AllSalesStatistics />}
         {tab === "influencer-notifications" && <InfluencerNotifications />}
         {tab === "my-files-and-videos" && <AllMyFilesAndVideos />}
+        {tab === "search" && <SearchPage />}
         {/* </div> */}
       </div>
     </div>

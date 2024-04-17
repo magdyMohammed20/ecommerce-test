@@ -1,0 +1,114 @@
+ul {
+  list-style-type: none;
+  padding: 20px 10px;
+  margin: 0;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px;
+  background-color: #eee;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.result {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.search-box {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: #007bff; /* Change border color on focus */
+}
+
+.results-container {
+  margin-top: 20px;
+}
+
+.product {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.product img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.product div {
+  flex-grow: 1;
+}
+
+.refinement-list-container {
+  margin-top: 20px;
+}
+
+.refinement-list-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.refinement-list-container ul li {
+  margin-bottom: 10px;
+}
+
+.refinement-list-container ul li label {
+  display: block;
+  cursor: pointer;
+}
+
+.refinement-list-container ul li input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.ais-SearchBox-form {
+  display: flex;
+  gap: 10px;
+}
+.ais-SearchBox-form input {
+  width: 100%;
+  padding: 10px;
+}
+
+.ais-SearchBox-form input:focus {
+  outline: 0;
+}
+.ais-SearchBox-form button {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 0;
+  box-shadow: 0px 0px 5px 0px #ccc;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

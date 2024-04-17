@@ -79,7 +79,7 @@ const AllMyFilesAndVideos: React.FC = () => {
     },
   ];
   return (
-    <div className="flex flex-col gap-4 md:gap-6 w-full mt-6 md:mt-8 lg:mt-0">
+    <div className="flex flex-col gap-4 md:gap-6 w-full p-6 lg:p-0">
       <div className="p-[24px]    flex items-center justify-between rounded-12 gap-4 bg-white w-full">
         <UserInfoCard />
       </div>
